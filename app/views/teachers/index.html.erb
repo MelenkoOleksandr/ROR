@@ -1,0 +1,26 @@
+<h1 class="page-title"><%= t('teachers.teachers_title') %></h1>
+<div><%= link_to t('teachers.create_teacher'), new_teacher_path, class: "btn btn-success mb-5" %></div>
+
+<table class="table w-50 table-dark table-striped">
+  <thead class="table-dark">
+  <tr>
+    <th scope="col"><%= t('shared.full_name') %></th>
+    <th scope="col"><%= t('shared.group') %></th>
+    <th class="d-flex justify-content-center" scope="col"><%= t('shared.actions') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @teachers.each do |teacher| %>
+    <tr>
+      <td ><%= teacher.to_s %></td>
+      <td><%= teacher.group.name %></td>
+      <td class="d-flex gap-3 justify-content-center">
+        <%= link_to t('shared.show'), teacher, class: "btn btn-primary" %>
+        <%= link_to t('shared.edit'), edit_teacher_path(teacher), class: "btn btn-warning" %>
+        <%= link_to t('shared.delete'), teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </td>
+  <% end %>
+  </tbody>
+</table>
+
+

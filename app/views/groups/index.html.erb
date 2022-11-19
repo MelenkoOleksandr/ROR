@@ -1,0 +1,29 @@
+<h1 class="page-title"><%= t('groups.title') %></h1>
+
+<div class="groups w-100 d-flex p-5 gap-3 align-items-center justify-content-center">
+
+  <% @groups.each do |group| %>
+   <div class="group card w-auto">
+     <div class="card-body">
+       <h5 class="card-title"><%= group.name %></h5>
+       <h6 class="card-subtitle mb-5 text-muted">
+         <% if group.teacher %>
+          <%= group.teacher %>
+          <% else %>
+            <%= t('shared.no_teacher') %>
+          <% end %>
+       </h6>
+        <p class="card-text">
+          <strong><%= t('groups.students') %>:</strong>
+          <%= group.students.count %>
+        </p>
+       <div class="d-flex gap-1">
+         <%= link_to t('shared.show'), group_path(group), class: "btn btn-primary" %>
+         <%= button_to t('shared.edit'), edit_group_path(group), method: 'get', class: "btn btn-warning"%>
+         <%= button_to t('shared.delete'), group_path(group), method: 'delete', data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+       </div>
+     </div>
+   </div>
+  <% end %>
+  </div>
+<%= link_to t('groups.new'), new_group_path, class: "btn btn-success" %>

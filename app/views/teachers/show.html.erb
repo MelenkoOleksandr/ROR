@@ -1,0 +1,7 @@
+<h1 class="page-title"><%= @teacher.to_s %></h1>
+<h4>Group: <%= link_to @group.name, group_path(@group) %></h4>
+
+<div class="d-flex gap-3 justify-content-center mt-5">
+  <%= link_to t('shared.edit'), edit_teacher_path(@teacher), class: "btn btn-warning" %>
+  <%= button_to t('shared.delete'), teacher_path(@teacher), method: 'delete', data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+</div>

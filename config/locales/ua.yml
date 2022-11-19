@@ -1,0 +1,38 @@
+ua:
+  header:
+    logo: Шкільний додаток
+    home: Групи
+    teachers: Вчителі
+    students: Учні
+  groups:
+    name: Назва
+    title: Групи
+    new: Нова група
+    students: Учні
+    edit_group: Редагувати групу
+    create_group: Створити групу
+    students_of_group: Учні групи
+  students:
+    students_title: Учні
+    create_student: Створити учня
+    edit_student: Редагувати учня
+    add_students: Додати учня
+  teachers:
+    teachers_title: Вчителі
+    create_teacher: Створити вчителя
+    edit_teacher: Редагувати вчителя
+    add_teachers: Додати вчителя
+  shared:
+    full_name: Повне ім'я
+    name: Ім'я
+    surname: Прізвище
+    no_teacher: Немає вчителя
+    no_students: Немає учнів
+    no_groups: Немає груп
+    create: Створити
+    edit: Редагувати
+    delete: Видалити
+    show: Показати
+    actions: Дії
+    group: Група
+

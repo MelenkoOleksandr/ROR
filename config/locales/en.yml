@@ -1,0 +1,38 @@
+en:
+  header:
+    logo: School app
+    home: Groups
+    teachers: Teachers
+    students: Students
+  groups:
+    name: Name
+    title: Groups
+    new: New Group
+    students: Students
+    edit_group: Edit Group
+    create_group: Create Group
+    students_of_group: Students of
+  students:
+    students_title: Students
+    create_student: Create Student
+    edit_student: Edit Student
+    add_students: Add Student
+  teachers:
+    teachers_title: Teachers
+    create_teacher: Create Teacher
+    edit_teacher: Edit Teacher
+    add_teachers: Add Teacher
+  shared:
+    full_name: Full name
+    name: Name
+    surname: Surname
+    no_teacher: No teacher
+    no_students: No students
+    no_groups: No groups
+    create: Create
+    edit: Edit
+    delete: Delete
+    show: Show
+    actions: Actions
+    group: Group
+

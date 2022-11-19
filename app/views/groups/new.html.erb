@@ -1,0 +1,10 @@
+<h1 class="page-title"><%= t("groups.create_group") %></h1>
+
+<%= form_with model: @group, class: "d-flex flex-column align-items-center gap-4" do |form| %>
+  <div class="form-group">
+    <%= form.label :name, t('groups.name'), class: "mb-3" %>
+    <%= form.text_field :name, placeholder: t('groups.name'), class: "form-control" %>
+  </div>
+
+  <%= form.submit t('shared.create'), class: "btn btn-success" %>
+<% end %>

@@ -1,0 +1,19 @@
+<h1 class="page-title"><%= t('students.add_students') %></h1>
+
+<%= form_with model: @student, class: "d-flex flex-column align-items-center gap-4" do |form| %>
+  <div class="form-group">
+    <%= form.label :name, class: "mb-3" %>
+    <%= form.text_field :name, placeholder: "Name", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :surname, class: "mb-3" %>
+    <%= form.text_field :surname, placeholder: "Name", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :group_id, class: "mb-3" %>
+    <%= form.select :group_id,  Group.all.map { |group| [ group.name, group.id ] }, class: "form-select" %>
+  </div>
+  <%= form.submit "Add", class: "btn btn-success" %>
+<% end %>
